@@ -8,7 +8,7 @@ server.use(express.json());
 server.use('/api', router);
 
 // puerto a traves de cual escucho
-const PORT = 3500;
+const PORT = process.env.PORT || 3500;
 server.listen(PORT, () => {
   console.log(`Server running http://localhost:${PORT}`);
 });
